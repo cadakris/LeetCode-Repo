@@ -12,3 +12,18 @@ var twoSum = function(nums, target) {
         }
     }
 }
+
+
+// Shorter time use hashmap
+// var twoSum = function(nums, target) {
+//     let numsHash = {};
+//     for(let i = 0; i < nums.length; i++){
+//         let difference = target - nums[i]
+//         if(difference in numsHash){
+//             return [i, numsHash[difference]]
+//         }else {
+//             numsHash[nums[i]] = i
+//         }
+//     }
+//     return []
+// }
