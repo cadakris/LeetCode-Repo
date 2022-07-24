@@ -10,3 +10,4 @@ var plusOne = function(digits) {
 //Take the array and make it into a num
 //Add 1 i to the num
 //then use .split() to turn it back to a string and then split to make it into an array
+//use BigInt to deal with larger numbers
