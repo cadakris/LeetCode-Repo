@@ -18,6 +18,3 @@ var arraySign = function(nums) {
     }
 };
 
-// if there is a 0 in an array, return 0 
-// if there is a negative amount of negative numbers, return -1
-// else, return 1
