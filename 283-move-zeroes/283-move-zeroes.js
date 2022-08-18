@@ -8,7 +8,7 @@ function moveZeroes (nums) {
     }
     count++
   }
-  console.log(nums)
+  return(nums)
 }
 moveZeroes([1,3,12,0,0,5,6,7])
 
