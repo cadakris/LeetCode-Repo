@@ -10,21 +10,48 @@
  * @return {ListNode}
  */
 
+
 const deleteMiddle = (head) => {
     if (!head.next) return null
-    
-  let slow = head
-  let fast = head
-  let prev = null
 
-  while (fast && fast.next) {
-    prev = slow
-    slow = slow.next
-    fast = fast.next.next
+  let countNode = head
+  let count = 0
+
+  while (countNode) {
+    countNode = countNode.next
+    count++
   }
-  prev.next = prev.next.next
+
+  let newCount = 0
+  let current = head
+  let middle = Math.floor((count/2) - 1)
+
+  while (current) {
+    if (newCount === middle) {
+      let next = current.next.next
+      current.next = next
+    }
+    current = current.next
+    newCount++
+  }
   return head
 }
+
+// const deleteMiddle = (head) => {
+//     if (!head.next) return null
+    
+//   let slow = head
+//   let fast = head
+//   let prev = null
+
+//   while (fast && fast.next) {
+//     prev = slow
+//     slow = slow.next
+//     fast = fast.next.next
+//   }
+//   prev.next = prev.next.next
+//   return head
+// }
 
 //have two pointers fast and slow equal to the head
 //have a previous to hold the previous value before the middle that will point .next.next (skipping the middle number to take out3  )
